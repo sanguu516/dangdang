@@ -21,7 +21,9 @@ export function MainLayout({
     <div className="flex min-h-screen flex-col bg-background">
       {showHeader && <Header />}
 
-      <main className={cn("flex-1", className)}>{children}</main>
+      <main className={cn("flex-1", showBottomNav && "pb-20", className)}>
+        {children}
+      </main>
 
       {showBottomNav && <BottomNav />}
     </div>
