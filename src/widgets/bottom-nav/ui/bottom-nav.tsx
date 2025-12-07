@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Search, User, Menu } from "lucide-react";
+import { Home, MapPin, MessageCircle, User, FileText } from "lucide-react";
 import { cn } from "@/shared/lib/utils";
 import { usePathname } from "next/navigation";
 
@@ -9,10 +9,11 @@ export function BottomNav() {
   const pathname = usePathname();
 
   const items = [
-    { href: "/home", label: "Home", icon: Home },
-    { href: "/search", label: "Search", icon: Search },
-    { href: "/menu", label: "Menu", icon: Menu },
-    { href: "/profile", label: "Profile", icon: User },
+    { href: "/", label: "홈", icon: Home },
+    { href: "/map", label: "지도", icon: MapPin },
+    { href: "/community", label: "커뮤니티", icon: FileText },
+    { href: "/chat", label: "채팅", icon: MessageCircle },
+    { href: "/my", label: "마이", icon: User },
   ];
 
   return (
